@@ -19,6 +19,23 @@ const UserSchema = Schema({
     online: {
         type: Boolean,
         default: false 
+    },
+    photo: {
+        type: String,
+        default: false 
+    },
+    myRoom: {
+        type: Schema.Types.ObjectId,
+        ref: 'Room',
+        require: false
+    },
+    type: {
+        type: String,
+        require: true 
+    },
+    enabledRoom: {
+        type: Boolean,
+        default: false 
     }
 
 });
